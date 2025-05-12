@@ -1,11 +1,21 @@
-#Projeto de machine learning feito usando TensorFlow ML 
+# Machine Learning Project with TensorFlow
 
-### The Project includes two main notebooks: "Getting Started.ipynb" and "image collection automation.ipynb"
+## Notebooks
 
-#### Automates satellite image capture from Google Earth within a specified area defined by start/end coordinates. 
-#### It opens the browser, enters each coordinate pair, takes screenshots, crops to the region of interest, and converts PNGs to JPGs. 
-#### Uses the pyautogui, pyperclip, and Pillow libraries. 
+### 1. Getting Started.ipynb  
+Builds a TensorFlow convolutional neural network to classify images.  
+- Installs dependencies  
+- Removes invalid images  
+- Loads and normalizes data  
+- Splits into training/validation/test sets  
+- Trains the model  
+- Plots loss and accuracy  
+- Reports precision metrics  
 
-#### "Getting Started.ipynb": 
-#### Builds a TensorFlow convolutional neural network to classify images. It installs dependencies, removes invalid images,
-#### loads and normalizes the data, splits into training/validation/test sets, trains the model, plots loss and accuracy, and reports precision metrics.
+### 2. Image Collection Automation.ipynb  
+Automates satellite image capture from Google Earth within a specified area defined by start/end coordinates.  
+- Opens the browser and navigates to Google Earth  
+- Enters each coordinate pair and searches  
+- Takes screenshots and crops to the region of interest  
+- Converts PNGs to JPGs  
+- Uses the **pyautogui**, **pyperclip**, and **Pillow** libraries  
