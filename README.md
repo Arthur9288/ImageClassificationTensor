@@ -1,4 +1,4 @@
-AI decides if the images from amazon rainforest contain signs of deforestation or not 
+AI notebook decides if the images from amazon rainforest contain signs of deforestation or not 
 
 # Machine Learning Project with TensorFlow
 
