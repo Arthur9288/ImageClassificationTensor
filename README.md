@@ -1,13 +1,11 @@
 AI notebook decides if the images from amazon rainforest contain signs of deforestation or not 
 
 # Machine Learning Project with TensorFlow
-
 ## Getting Started.ipynb  
 Builds a TensorFlow convolutional neural network to classify images. It installs all necessary dependencies, removes invalid or corrupted images, loads and normalizes the dataset, splits it into training, validation, and test sets, constructs and trains the model, plots loss and accuracy curves, and reports precision metrics.
 
 ## Image Collection Automation.ipynb  
 Automates satellite image capture from Google Earth within a specified area defined by start and end coordinates. It opens the browser, enters each coordinate pair, takes screenshots of the selected view, crops out everything except the satellite imagery, and converts all PNG files to JPG for later analysis. The script relies on the **pyautogui**, **pyperclip**, and **Pillow** libraries.
 
-![Image](https://github.com/user-attachments/assets/0d8394c5-9e12-4af0-b48e-9370421f2ff7)
-
-![Image](https://github.com/user-attachments/assets/15c28faf-8014-4c34-8f33-cd70c60392a8)
+<img src="https://github.com/user-attachments/assets/9d365de5-2e1d-4af8-bdfb-1039825d7477" width="600">
+<img src="https://github.com/user-attachments/assets/9c264d5f-d9a6-40b1-a8f2-ef93a4f427f0" width="600">
