@@ -9,6 +9,4 @@ Automates satellite image capture from Google Earth within a specified area defi
 
 <img src="https://github.com/user-attachments/assets/0d8394c5-9e12-4af0-b48e-9370421f2ff7" width="600">
 
-
-
 <img src="https://github.com/user-attachments/assets/15c28faf-8014-4c34-8f33-cd70c60392a8" width="600">
