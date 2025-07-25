@@ -8,4 +8,7 @@ Builds a TensorFlow convolutional neural network to classify images. It installs
 Automates satellite image capture from Google Earth within a specified area defined by start and end coordinates. It opens the browser, enters each coordinate pair, takes screenshots of the selected view, crops out everything except the satellite imagery, and converts all PNG files to JPG for later analysis. The script relies on the **pyautogui**, **pyperclip**, and **Pillow** libraries.
 
 <img src="https://github.com/user-attachments/assets/0d8394c5-9e12-4af0-b48e-9370421f2ff7" width="600">
+
+
+
 <img src="https://github.com/user-attachments/assets/15c28faf-8014-4c34-8f33-cd70c60392a8" width="600">
