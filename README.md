@@ -61,12 +61,11 @@ Access the application by navigating to `http://localhost:8000` in your web brow
 
 ### 3. Data Collection
 
-<img width="771" height="756" alt="Image" src="https://github.com/user-attachments/assets/3532889e-9f8e-4d09-a7eb-0e7478aadbdd" />
-
 To download and automatically classify new satellite images for dataset expansion:
 ```bash
 python collect_images.py
 ```
+<img width="771" height="756" alt="Image" src="https://github.com/user-attachments/assets/3532889e-9f8e-4d09-a7eb-0e7478aadbdd" />
 
 ## Docker Deployment
 
