@@ -9,6 +9,8 @@ AmazonImageClassification is a machine learning and computer vision project desi
 
 The project features an automated data collection pipeline, a trained deep learning model for image classification, and a web interface for real-time analysis.
 
+<img width="1913" height="1013" alt="Image" src="https://github.com/user-attachments/assets/a035b6b4-ef71-4966-86ae-cf23f67a6d97" />
+
 ## Features
 
 - **Automated Data Collection:** Integrated with the Google Earth Engine API to download Sentinel-2 satellite images based on geographic coordinates. Includes an active learning script that auto-classifies new images to expand the dataset.
