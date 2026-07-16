@@ -9,8 +9,6 @@ AmazonImageClassification is a machine learning and computer vision project desi
 
 The project features an automated data collection pipeline, a trained deep learning model for image classification, and a web interface for real-time analysis.
 
-<img width="771" height="756" alt="Image" src="https://github.com/user-attachments/assets/3532889e-9f8e-4d09-a7eb-0e7478aadbdd" />
-
 <img width="1913" height="1013" alt="Image" src="https://github.com/user-attachments/assets/a035b6b4-ef71-4966-86ae-cf23f67a6d97" />
 
 <img width="1912" height="893" alt="Image" src="https://github.com/user-attachments/assets/31c4ccb6-23af-4e8b-bd05-2a3b86c7c81a" />
