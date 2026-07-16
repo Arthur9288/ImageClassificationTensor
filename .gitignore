@@ -10,6 +10,7 @@
 service_account*.json
 
 # ── Imagens coletadas / dados gerados ──
+data/
 data_coletado/
 screenshots/
 screenshot*.png
