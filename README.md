@@ -1,12 +1,79 @@
-AI notebook decides if the images from amazon rainforest contain signs of deforestation or not 
+# AmazonImageClassification
 
-# Machine Learning Project with TensorFlow
-## Getting Started.ipynb  
-Builds a TensorFlow convolutional neural network to classify images. It installs all necessary dependencies, removes invalid or corrupted images, loads and normalizes the dataset, splits it into training, validation, and test sets, constructs and trains the model, plots loss and accuracy curves, and reports precision metrics.
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.93%2B-00a393)
+![Google Earth Engine](https://img.shields.io/badge/Google_Earth_Engine-API-green)
 
-## Image Collection Automation.ipynb  
-Automates satellite image capture from Google Earth within a specified area defined by start and end coordinates. It opens the browser, enters each coordinate pair, takes screenshots of the selected view, crops out everything except the satellite imagery, and converts all PNG files to JPG for later analysis. The script relies on the **pyautogui**, **pyperclip**, and **Pillow** libraries.
+AmazonImageClassification is a machine learning and computer vision project designed to detect deforestation patterns in the Amazon rainforest using satellite imagery.
 
+The project features an automated data collection pipeline, a trained deep learning model for image classification, and a web interface for real-time analysis.
+
+## Features
+
+- **Automated Data Collection:** Integrated with the Google Earth Engine API to download Sentinel-2 satellite images based on geographic coordinates. Includes an active learning script that auto-classifies new images to expand the dataset.
+- **Image Classification Model:** Utilizes Transfer Learning (MobileNetV2) and Data Augmentation techniques to classify images into two categories: "Desmatamento" (Deforestation) and "Floresta Intacta" (Intact Forest).
+- **REST API:** A FastAPI-based microservice that handles model inference and serves the web application.
+- **Web Interface:** A frontend built with Vanilla JS, CSS, and Leaflet.js, allowing users to draw a bounding box over a map and receive real-time classification results.
+
+## Prerequisites
+
+- Python 3.9+
+- Google Cloud Platform account (for Google Earth Engine API access)
+
+## Installation
+
+1. Clone the repository and navigate to the project directory:
+```bash
+git clone https://github.com/your-username/AmazonImageClassification.git
+cd AmazonImageClassification
+```
+
+2. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Configure environment variables:
+Create a `.env` file based on the provided template and add your Google Cloud credentials.
+```bash
+cp .env.example .env
+```
+
+## Usage
+
+### 1. Training the Model
+To train the model on your local dataset (placed in `data/Desmatamento` and `data/Floresta_Intacta`), run:
+```bash
+python train.py
+```
+
+### 2. Starting the API and Web Interface
+To start the FastAPI server and serve the frontend application:
+```bash
+python main.py
+```
+Access the application by navigating to `http://localhost:8000` in your web browser. API documentation (Swagger) is available at `http://localhost:8000/docs`.
+
+### 3. Data Collection
+To download and automatically classify new satellite images for dataset expansion:
+```bash
+python collect_images.py
+```
+
+## Docker Deployment
+
+To build and run the application using Docker:
+
+```bash
+docker build -t amazon-image-classification .
+docker run -p 8000:8000 amazon-image-classification
+```
+
+## Legacy Implementation
+
+The original implementation of this project relied on a Jupyter Notebook using `pyautogui` to automate the browser and capture screenshots from Google Earth. This approach has been completely deprecated in favor of the current architecture.
+
+Legacy execution screenshots for historical reference:
 <img src="https://github.com/user-attachments/assets/0d8394c5-9e12-4af0-b48e-9370421f2ff7" width="600">
-
 <img src="https://github.com/user-attachments/assets/15c28faf-8014-4c34-8f33-cd70c60392a8" width="600">

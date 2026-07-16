@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazonImageClassification</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet (Map Library) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Controls -->
+        <aside class="sidebar glass-panel">
+            <div class="brand">
+                <div class="logo-icon">🌿</div>
+                <h1>AmazonImageClassification</h1>
+                <p>Monitoramento de Desmatamento por Satélite</p>
+            </div>
+
+            <div class="control-group">
+                <h3>1. Selecione a Área</h3>
+                <p class="helper-text">Clique no mapa para marcar o <strong>Ponto 1</strong>, e depois clique novamente para marcar o <strong>Ponto 2</strong> (formando o retângulo).</p>
+                <div class="coordinates-display" style="flex-direction: column; gap: 0.5rem;">
+                    <div style="display: flex; gap: 1rem;">
+                        <div class="coord-box">
+                            <label>Lat Min</label>
+                            <input type="text" id="lat-min" readonly placeholder="--">
+                        </div>
+                        <div class="coord-box">
+                            <label>Lon Min</label>
+                            <input type="text" id="lon-min" readonly placeholder="--">
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <div class="coord-box">
+                            <label>Lat Max</label>
+                            <input type="text" id="lat-max" readonly placeholder="--">
+                        </div>
+                        <div class="coord-box">
+                            <label>Lon Max</label>
+                            <input type="text" id="lon-max" readonly placeholder="--">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>2. Analisar</h3>
+                <button id="analyze-btn" class="primary-btn" disabled>
+                    <span class="btn-text">Analisar com Inteligência Artificial</span>
+                    <span class="loader" style="display: none;"></span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content (Map & Results) -->
+        <main class="main-content">
+            <!-- Leaflet Map Container -->
+            <div id="map" class="map-container glass-panel"></div>
+
+            <!-- Result Overlay Panel (Hidden by default) -->
+            <div id="result-panel" class="result-panel glass-panel hidden">
+                <button id="close-result-btn" class="close-btn">&times;</button>
+                <h2>Resultado da Análise</h2>
+                
+                <div class="result-content">
+                    <div class="image-preview">
+                        <img id="satellite-img" src="" alt="Imagem de Satélite">
+                        <div class="image-overlay" id="image-overlay-status"></div>
+                    </div>
+                    
+                    <div class="analysis-details">
+                        <div id="status-badge" class="status-badge">Analisando...</div>
+                        
+                        <div class="metric">
+                            <span class="metric-label">Confiança da IA</span>
+                            <div class="progress-bar-bg">
+                                <div id="confidence-bar" class="progress-bar-fill"></div>
+                            </div>
+                            <span id="confidence-text" class="metric-value">0%</span>
+                        </div>
+                        
+                        <div class="metric">
+                            <span class="metric-label">Área Analisada</span>
+                            <span id="area-text" class="metric-value">-- km²</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

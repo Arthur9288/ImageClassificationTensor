@@ -1,3 +1,26 @@
 /started
 /logs
 /.ipynb_checkpoints
+
+# ── Arquivos sensíveis (NUNCA subir ao GitHub) ──
+.env
+*.h5
+*.keras
+*_key.json
+service_account*.json
+
+# ── Imagens coletadas / dados gerados ──
+data_coletado/
+screenshots/
+screenshot*.png
+img*.png
+cropped*.jpg
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+venv/
+env/
+.venv/
