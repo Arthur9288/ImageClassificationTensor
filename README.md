@@ -62,6 +62,9 @@ python main.py
 Access the application by navigating to `http://localhost:8000` in your web browser. API documentation (Swagger) is available at `http://localhost:8000/docs`.
 
 ### 3. Data Collection
+
+<img width="771" height="756" alt="Image" src="https://github.com/user-attachments/assets/3532889e-9f8e-4d09-a7eb-0e7478aadbdd" />
+
 To download and automatically classify new satellite images for dataset expansion:
 ```bash
 python collect_images.py
