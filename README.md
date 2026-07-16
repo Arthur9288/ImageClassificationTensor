@@ -11,6 +11,8 @@ The project features an automated data collection pipeline, a trained deep learn
 
 <img width="1913" height="1013" alt="Image" src="https://github.com/user-attachments/assets/a035b6b4-ef71-4966-86ae-cf23f67a6d97" />
 
+<img width="1912" height="893" alt="Image" src="https://github.com/user-attachments/assets/31c4ccb6-23af-4e8b-bd05-2a3b86c7c81a" />
+
 ## Features
 
 - **Automated Data Collection:** Integrated with the Google Earth Engine API to download Sentinel-2 satellite images based on geographic coordinates. Includes an active learning script that auto-classifies new images to expand the dataset.
